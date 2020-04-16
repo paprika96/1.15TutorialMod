@@ -1,5 +1,7 @@
 package com.superg321.tutorialmod;
 
+// TODO: At start of Tutorial3, next import is missing from turty's TutorialMod.java file.  Intelli-sense is saying it's never used, so I'm guessing 
+//       that it's for one of the methods that Turty removed but that I haven't yet.  When I get a bit further along 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,6 +26,9 @@ public class TutorialMod
 {
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
+    public static final String MOD_ID = "tutorialmod"; 
+    public static TutorialMod instance; 
+    
 
     public TutorialMod() {
         // Register the setup method for modloading
@@ -38,12 +43,14 @@ public class TutorialMod
         // Register the doClientStuff method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
+        instance = this; 
+        
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    private void setup(final FMLCommonSetupEvent event)
-    {
+    private void setup(final FMLCommonSetupEvent event){
+    	
     	// TOOD: Tutorial suggests removing the logger code in this method (so method is empty) but I want to try and find the logs and comments first. f
     	// 	1. Find the logs?  
     	//  2. Find these entries in the logs. 
