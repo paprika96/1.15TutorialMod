@@ -36,7 +36,6 @@ public class BlockInit {
 		//       had added a SpecialBlock that had these properties.  No Drops or something like that was another property he mentioned
 		//       but apparently no drops are applicable in the survival mode only (need to confirm this). 
 		event.getRegistry().register(new BlockItem(example_block, new Item.Properties().maxStackSize(16).group(ItemGroup.BREWING)).setRegistryName("example_block"));  
-	}
-	
+	}	
 
 }

@@ -24,6 +24,7 @@ public class ItemInit {
 	 { 
 		 
 		 event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("example_item"));
+		 event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("example_item2"));
 		 event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.BREWING)).setRegistryName("test_item")); 
 	 }
 
