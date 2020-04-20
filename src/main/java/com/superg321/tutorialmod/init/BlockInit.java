@@ -18,12 +18,14 @@ import net.minecraftforge.registries.ObjectHolder;
 @Mod.EventBusSubscriber(modid = TutorialMod.MOD_ID, bus = Bus.MOD)
 public class BlockInit {
 
-	public static final Block example_block = null; 
+	public static final Block example_block = null;
+	public static final Block example_block2 = null; 
 	
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event)
 	{ 
-		event.getRegistry().register(new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(0.5f, 15.0f).sound(SoundType.SAND)).setRegistryName("example_block"));	 
+		event.getRegistry().register(new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(0.5f, 15.0f).sound(SoundType.SAND)).setRegistryName("example_block"));
+		event.getRegistry().register(new Block(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.5f, 15.0f).sound(SoundType.GLASS)).setRegistryName("example_block2"));
 	}
 	
 	@SubscribeEvent
@@ -36,6 +38,7 @@ public class BlockInit {
 		//       had added a SpecialBlock that had these properties.  No Drops or something like that was another property he mentioned
 		//       but apparently no drops are applicable in the survival mode only (need to confirm this). 
 		event.getRegistry().register(new BlockItem(example_block, new Item.Properties().maxStackSize(16).group(ItemGroup.BREWING)).setRegistryName("example_block"));  
+		event.getRegistry().register(new BlockItem(example_block2, new Item.Properties().maxStackSize(16).group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("example_block2"));
 	}	
 
 }
