@@ -43,6 +43,7 @@ public class TutorialMod
         MinecraftForge.EVENT_BUS.register(this);
     }
 
+    
     private void setup(final FMLCommonSetupEvent event){
     	
         LOGGER.info("HELLO FROM PREINIT");
@@ -50,6 +51,7 @@ public class TutorialMod
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
+    	
     	
     }
 
@@ -75,7 +77,7 @@ public class TutorialMod
     	
     	@Override
     	public ItemStack createIcon() { 
-    		return new ItemStack(ItemInit.test_item); 
+    		return new ItemStack(ItemInit.rainbow_pill); 
     	}  	
     }
 

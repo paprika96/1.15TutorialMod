@@ -21,7 +21,9 @@ public class ItemInit {
 
 	 
 	 public static final Item example_item = null;
-	 public static final Item test_item = null;
+	 public static final Item example_item2 = null;
+	 public static final Item rainbow_pill = null;
+	  
 	 
 	 @SubscribeEvent
 	 public static void registerItems(final RegistryEvent.Register<Item> event)
@@ -29,7 +31,7 @@ public class ItemInit {
 		 
 		 event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("example_item"));
 		 event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("example_item2"));
-		 event.getRegistry().register(new Item(new Item.Properties().group(TutorialItemGroup.instance).food(new Food.Builder().hunger(6).saturation(1.2f).effect(new EffectInstance(Effects.ABSORPTION, 6000,5),0.7f).build())).setRegistryName("test_item"));  
+		 event.getRegistry().register(new Item(new Item.Properties().group(TutorialItemGroup.instance).food(new Food.Builder().hunger(6).saturation(1.2f).effect(new EffectInstance(Effects.ABSORPTION, 6000,5),0.7f).build())).setRegistryName("rainbow_pill"));  
 	 }
 
 } 
