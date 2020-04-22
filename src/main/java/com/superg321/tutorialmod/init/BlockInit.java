@@ -25,18 +25,12 @@ public class BlockInit {
 	public static void registerBlocks(final RegistryEvent.Register<Block> event)
 	{ 
 		event.getRegistry().register(new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(0.5f, 15.0f).sound(SoundType.SAND)).setRegistryName("example_block"));
-		event.getRegistry().register(new Block(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.5f, 15.0f).sound(SoundType.GLASS)).setRegistryName("example_block2"));
+		event.getRegistry().register(new Block(Block.Properties.create(Material.GLASS).hardnessAndResistance(0.5f, 15.0f).lightValue(15).sound(SoundType.GLASS)).setRegistryName("example_block2"));
 	}
 	
 	@SubscribeEvent
 	public static void registerBlockItems(final RegistryEvent.Register<Item> event)
 	{ 
-		// TODO: look in Turty's github repo and see the additional properties (see SpecialBlock) in particular, see 
-		//       .hardnessAndResistance(2.0f, 10.0f).harvestLevel(2).harvestTool(ToolType.PICKAXE). In episode 4, as he was testing 
-		//       this new block he realized that he hadn't set these properties and so his in-game expectations were not met, but 
-		//       but he said how to fix it anyway.  I looked at his github repo and he hadn't fixed this example_block, but he 
-		//       had added a SpecialBlock that had these properties.  No Drops or something like that was another property he mentioned
-		//       but apparently no drops are applicable in the survival mode only (need to confirm this). 
 		event.getRegistry().register(new BlockItem(example_block, new Item.Properties().maxStackSize(16).group(ItemGroup.BREWING)).setRegistryName("example_block"));  
 		event.getRegistry().register(new BlockItem(example_block2, new Item.Properties().maxStackSize(16).group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("example_block2"));
 	}	

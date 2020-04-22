@@ -4,7 +4,9 @@
 	"item.tutorialmod.test_item": "Test Item", 
 	
 	"block.tutorialmod.example_block":"Example Block",
-	"block.tutorialmod.example_block2":"Example Block2"
+	"block.tutorialmod.example_block2":"Example Block2", 
+	
+	"itemGroup.tutorialtab": "Tutorial Tab"
 }
 
  

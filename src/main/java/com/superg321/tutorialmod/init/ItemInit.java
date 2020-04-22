@@ -1,9 +1,13 @@
 package com.superg321.tutorialmod.init;
 
 import com.superg321.tutorialmod.TutorialMod;
+import com.superg321.tutorialmod.TutorialMod.TutorialItemGroup;
 
+import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -25,7 +29,7 @@ public class ItemInit {
 		 
 		 event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("example_item"));
 		 event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.MISC)).setRegistryName("example_item2"));
-		 event.getRegistry().register(new Item(new Item.Properties().group(ItemGroup.BREWING)).setRegistryName("test_item")); 
+		 event.getRegistry().register(new Item(new Item.Properties().group(TutorialItemGroup.instance).food(new Food.Builder().hunger(6).saturation(1.2f).effect(new EffectInstance(Effects.ABSORPTION, 6000,5),0.7f).build())).setRegistryName("test_item"));  
 	 }
 
 } 
